@@ -1,0 +1,16 @@
+//////////////////////////////////////////////////////
+///     Form Styles
+//////////////////////////////////////////////////////
+
+
+.error, .error:focus {
+    border-bottom: 1px solid red !important;
+}
+
+// HTML5 new pseudo-classes for error validation
+input:not(:focus):invalid {
+    border-bottom: 1px solid red !important;
+}
+input:focus:invalid {
+    border-bottom: 1px solid #000 !important;
+}

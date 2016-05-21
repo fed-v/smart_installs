@@ -1,0 +1,208 @@
+//////////////////////////////////////////////////////
+///     Footer Styles
+//////////////////////////////////////////////////////
+
+
+footer {
+    width:100%;
+    padding: 80px 0 100px 0;
+    text-align: center;
+    background: #212121;
+    color: #555;
+    font-size: 1em;
+    line-height: 0px;
+    height:200px;
+}
+
+#copyright-wrapper {
+    // margin-top:40px;  This value when social media wrapper is visible
+    margin-top: 20px;
+}
+
+#copyright {
+    font-size: .8em;
+}
+
+span #year {
+    margin-right: 5px;
+}
+
+.smartinstalls {
+    color: @accent-color;
+}
+
+.social-media-wrapper {
+    margin-bottom:60px;
+}
+
+.social-media-nav {
+    width:320px;
+    margin: auto;
+    display: none; /* Hidden until otherwise */
+}
+
+.social-media-nav > li {
+    float:left;
+    margin-left:20px;
+}
+
+
+.social-media-nav > li > a {
+    color: #555 !important;
+    .transition(.5s ease-in-out);
+}
+
+.social-media-nav > li > a:hover {
+    text-decoration:none;
+}
+
+.social-media-nav > li > #twitter:hover {
+    color:#55acee !important;
+    .transition(.5s ease-in-out);
+}
+
+.social-media-nav > li > #google:hover {
+    color:#dd4b39 !important;
+    .transition(.5s ease-in-out);
+}
+
+.social-media-nav > li > #facebook:hover {
+    color:#3b5998 !important;
+    .transition(.5s ease-in-out);
+}
+
+.social-media-nav > li > a > i {
+    margin-right:5px;
+}
+
+// .link-to-top {
+//     float: right;
+//     margin-right: 35px;
+//     font-size:45px;
+//     color: #555;
+//     .transition(.5s ease-in-out);
+//     position: relative;
+//     top: 0px;
+//     //right:35px;
+// }
+//
+// .link-to-top:focus {
+//     color: #555;
+// }
+//
+// .link-to-top:hover {
+//     color: #999;
+//     .transition(.5s ease-in-out);
+//  	 top: -2px;
+// }
+
+
+.btn-go-top {
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 40px;
+    height: 40px;
+    //background: #fdfdfd;
+    background: rgba(0,0,0,.10);
+    border: 1px solid #999;
+    border-radius: 3px;
+    color: #999;
+    outline: none;
+    font-size: 2.2em;
+    font-weight:lighter;
+    display:none;
+    //.transition(.5s);   // Interferes with jQuery
+    z-index: 2000;
+}
+
+.btn-go-top:hover {
+   //bottom: 37px;
+   //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   border: 1px solid #666;
+   color: #666 !important;
+   //.transition(.5s);   // Interferes with jQuery
+}
+
+.btn-go-top:focus, .btn-go-top:active, .btn-go-top:visited {
+   color: #999;
+}
+
+@media only screen and (max-width: 960px){
+   .btn-go-top {
+       float: right;
+       //margin-right: 35px;
+       font-size:45px;
+       color: #555;
+       .transition(.5s ease-in-out);
+       position: relative;
+       top: 0px;
+       border:none;
+       background:transparent;
+       right:35px;
+   }
+
+   .btn-go-top:focus {
+       color: #555;
+   }
+
+   .btn-go-top:hover {
+       color: #999;
+       .transition(.5s ease-in-out);
+    	 top: -2px;
+       border:none;
+       background:transparent;
+       box-shadow: none;
+   }
+}
+
+
+//////////////////////////////////////////////////////
+///     Bootstraps Viewports
+//////////////////////////////////////////////////////
+
+// Extra small
+@media only screen and (max-width: 480px){
+
+    .btn-go-top {
+        //float: none;
+        //margin-right: 0px;
+        line-height: 10px;
+        position:relative;
+         right: 42%;
+    }
+
+    #copyright {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+// Small
+@media only screen and (max-width: 768px){
+
+    footer {
+        width:100%;
+        padding: 65px 0 60px 0;
+    }
+
+    #copyright-wrapper {
+        margin-top:50px;
+    }
+}
+
+// Small
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+}
+
+// Medium
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+
+}
+
+// Large
+@media only screen and (min-width: 1200px){
+
+}

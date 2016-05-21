@@ -1,0 +1,219 @@
+/*-----------------------------------------------------------------------------
+Smart Installs Screen Stylesheet
+
+version:   1.0
+date:      25/12/15
+author:    Federico Venturino
+email:     fed_v@hotmail.com
+website:   wwww.federicoventurino.com
+version history: [location of file]
+-----------------------------------------------------------------------------*/
+
+//////////////////////////////////////////////////////
+///     Load Mixens
+//////////////////////////////////////////////////////
+
+@import "defaults/normalize.less";
+@import "defaults/html5-boilerplate-defaults.less";
+@import "defaults/clean.less";
+@import "defaults/forms.less";
+@import "defaults/tables.less";
+@import "defaults/variables";
+@import "defaults/et-line.less";
+
+
+/*@import "mixens/preboot.less";*/    // Optional Less Mixens Library
+@import "mixens/lesshat.less";
+@import "mixens/my-mixens.less";
+
+
+// Import Web Components
+@import "sections/header.less";
+@import "sections/section-blocks.less";
+@import "sections/owl.carousel.less";
+@import "sections/owl.less";
+@import "sections/owl-override.less";
+@import "sections/style-responsive.less";
+@import "sections/footer.less";
+@import "sections/nest.less";
+@import "sections/services.less";
+
+
+
+
+
+//////////////////////////////////////////////////////
+///     General Styles
+//////////////////////////////////////////////////////
+
+
+html {
+	overflow-y: scroll;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+html, body {
+ 	font-family: @bodyFontFamily;
+	font-size: 100%;
+	line-height: 1.4;
+	letter-spacing: 1px;
+}
+
+
+main {
+   max-width:1440px;
+   margin: auto;
+   background: #FFFFFF;
+   box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+
+/////////////////////////////////////////////////////////////////
+/// Header Styles
+
+h1, h2, h3, h4, h5{
+	font-family: @headerFontFamily;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.2em;
+		text-align: center;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+p {
+    font-size: 1em;
+	font-family: @bodyFontFamily;
+}
+
+a, a:hover, a:focus, a:visited {
+	text-decoration:none;
+}
+
+
+/////////////////////////////////////////////////////////////////
+/// Button Styles
+
+.button {
+	min-width: 120px;
+	padding:12px 25px 12px 25px;
+	font-size: 1em;
+	border: none;
+	position: relative;
+ 	top: 0px;
+	.border-radius(0px);
+	.transition(0.5s);
+}
+
+.button:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	text-decoration: none;
+ 	top: -2px;
+	.transition(0.5s);
+}
+
+.green, .green:active, .green:visited, .green:focus {
+	background: @accent-color;
+	color: #fff;
+	.transition(0.5s);
+}
+
+.green:hover {
+	background: darken(@accent-color, 10%);
+	color:#fff;
+	.transition(0.5s);
+}
+
+.black, .black:active, .black:visited, .black:focus {
+	background: #000;
+	color: #fff;
+	.transition(0.5s);
+}
+
+.black:hover {
+	background: darken(#000, 10%);
+	color:#fff;
+	.transition(0.5s);
+}
+
+.white, .white:active, .white:visited, .white:focus {
+	background: #fff;
+	color: #000;
+	.transition(0.5s);
+}
+
+.white:hover {
+	background: darken(#fff, 10%);
+	color:#000;
+	.transition(0.5s);
+}
+
+.white:active {
+	background: darken(#fff, 10%);
+	color:#000;
+}
+
+
+
+/////////////////////////////////////////////////////////////////
+/// Float Classes
+
+.clear { clear:both; }
+.right { float: right; }
+.left { float: left; }
+
+
+
+//////////////////////////////////////////////////////
+///     Bootstraps Viewports
+//////////////////////////////////////////////////////
+
+// Extra small
+@media only screen and (max-width: 480px){
+	.button {
+		min-width: 120px;
+		padding:12px 25px 12px 25px;
+		font-size: 1em;
+		border: none;
+		position: relative;
+	 	top: 0px;
+		.transition(0.5s);
+	}
+
+	.button:hover {
+		box-shadow: none;
+		text-decoration: none;
+	 	top: 0px;
+	}
+
+	h2 {
+	    font-size: 2em;
+	}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+}
+
+// Small
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+}

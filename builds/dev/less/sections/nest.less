@@ -1,0 +1,518 @@
+//////////////////////////////////////////////////////
+///     Nest Page Styles
+//////////////////////////////////////////////////////
+
+
+#nest-main-banner {
+    .back-image('../images/nest-page-banner.jpg');
+    margin:auto;
+    height: 747px;
+    padding-top:50px;
+}
+
+#nest-main-banner h2{
+    color: @accent-color;
+    font-size: 3em;
+}
+
+#nest-main-banner hr{
+    width:120px;
+}
+
+#nest-main-banner .section-content {
+    #nest-main-banner {
+        max-width: 750px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #nest-main-banner {
+        height: 650px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    #nest-main-banner {
+        .back-image('../images/nest-page-banner_sm.jpg');
+        padding-top:25px;
+        height: 400px;
+    }
+
+    #nest-main-banner .section-content {
+        font-size: .8em;
+    }
+
+    #nest-main-banner hr{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+//////////////////////////////////////////////////////
+///     Nest Sub Menu Styles
+
+#nest-sub-menu {
+    height:130px;
+    background: #f9f9f9;
+    //border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 5px 2px rgba(0,0,0,.15);
+}
+
+
+
+#product-sub-menu {
+    width:436px;
+    margin:auto;
+    //height:130px;
+    //background: green;
+}
+
+
+#product-sub-menu>li {
+    display: block;
+    float: left;
+}
+
+#product-sub-menu>li hr {
+    display: none;
+    outline: none;
+    border: none;
+    background: #DBE3E5;
+    width: 100%;
+    height: 1px
+}
+
+#product-sub-menu .product-sub-menu-item {
+    display: block;
+    position: relative;
+    padding: 20px 20px;
+    font-family: "Akkurat",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 13px;
+    font-size: .9em;
+    color: #95a1aa;
+    .transition(.5s);
+    margin: 0px 20px 0px 20px;
+}
+
+#product-sub-menu .product-sub-menu-item:hover {
+    color:#666;
+    .transition(.5s);
+}
+
+#product-sub-menu .product-thermostat span{
+    background-image: url("../images/nav-product-thermostat-f5922cc980.png");
+    background-repeat: no-repeat;
+    background-size: 57px 57px;
+    background-position: center 0;
+    float:left;
+}
+
+#product-sub-menu .product-protect span {
+    background-image: url("../images/nav-product-protect-419d74f058.png");
+    background-repeat: no-repeat;
+    background-size: 55px 54px;
+    background-position: 50% 0;
+    //width: 140px;
+}
+
+#product-sub-menu .product-cam span {
+    background-image: url("../images/nav-product-camera-566cd75398.png");
+    background-repeat: no-repeat;
+    background-size: 38px 58px;
+    background-position: center 0;
+}
+
+#product-sub-menu .product-sub-menu-item span {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    padding: 70px 0 0;
+    text-align: center;
+}
+
+
+//////////////////////////////////////////////////////
+///     Nest Protect Styles
+
+#nest-looks-out {
+    //background: url('../images/background-8862e4e785.jpg') 0px -30px;
+    .back-image('../images/background-8862e4e785.jpg');
+    max-width: 1280px;
+    margin:auto;
+    margin-top:0px;
+    height:600px;
+    color:#fff;
+    padding-top: 20px;
+}
+
+#nest-looks-out .copy-wrapper {
+    font-size:1em;
+    width:250px;
+    position: absolute;
+    right: 12%;
+    margin-top: 200px;
+}
+
+#nest-looks-out .copy-wrapper h4{
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 1330px){
+    #nest-looks-out {
+        margin-top: 35px;
+    }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1150px){
+
+    #nest-looks-out .copy-wrapper {
+        right: 7%;
+        margin-top: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #nest-looks-out {
+        height:480px;
+        //margin-top:20px;
+    }
+
+    #nest-looks-out .copy-wrapper {
+        right: 7%;
+        margin-top: 100px;
+        font-size:.9em;
+        width:200px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #nest-looks-out {
+        height:400px;
+        //margin-top:0px;
+    }
+    #nest-looks-out .copy-wrapper {
+        right: 3%;
+        margin-top: 155px;
+        font-size:.8em;
+        width:200px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #nest-looks-out {
+        height: 360px;
+        background-image: url("../images/background-8862e4e785-mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding-top: 15px;
+    }
+    #nest-looks-out .copy-wrapper {
+        display:none;
+    }
+}
+
+#nest-looks-mobile-copy-wrapper {
+    padding: 30px 20px 1px 20px;
+    background:#e6e6e7;
+}
+
+#nest-looks-mobile-copy-wrapper h4 {
+    margin-bottom: 10px;
+}
+
+#protect-video-section {
+    background: #00000b;
+    color: #999;
+}
+
+#protect-info {
+    background: #e6e6e7;
+    color: #8A9299;
+}
+
+#protect-info .container div {
+    padding: 0 20px 0 20px;
+}
+
+#protect-info .container div h5{
+    margin-bottom: 20px;
+    font-weight:bold;
+    font-size: 1.2em;
+    color: #8A9299;
+}
+
+@media (min-width: 1200px) {
+    #protect-info .container {
+        width: 900px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #protect-info {
+        padding: 0px 0px 60px 0px;
+    }
+    #protect-info .container div h5 {
+        margin-top: 50px;
+        margin-bottom:10px;
+    }
+}
+
+
+//////////////////////////////////////////////////////
+///     Nest Camera Styles
+
+#nest-camera-banner {
+    .back-image('../images/hero-13881e6b13.jpg');
+    height: 500px;
+}
+
+#nest-camera-banner div{
+    background: rgba(0,0,0, 0.25);
+    margin-top: 230px;
+    position: absolute;
+    left: 10%;
+    color: #fff;
+    padding: 25px 35px 35px 35px;
+}
+
+#nest-camera-banner div h5{
+    font-size: 2.5em;
+    margin-bottom:5px;
+}
+
+@media only screen and (max-width: 480px){
+    #nest-camera-banner {
+        // .back-image('../images/hero-13881e6b13-mobile.jpg');
+        // background-position: 0px 0px;
+        // background-size: contain;
+        // height:300px;
+        display: none;
+    }
+
+    /*#nest-camera-banner div{
+        margin-top:125px;
+        width: 100%;
+        height: 360px;
+        margin:auto;
+        position: inherit;
+        font-size: .9em;
+    }
+
+    #nest-camera-banner div h5{
+        font-size: 2em;
+        margin-bottom:5px;
+    }/*/
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    #nest-camera-banner {
+        background-position: 0px 0px;
+        height:350px;
+    }
+
+    #nest-camera-banner div{
+        margin-top:125px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #nest-camera-banner {
+        background-position: 0px -30px;
+        height:400px;
+    }
+
+    #nest-camera-banner div{
+        margin-top:185px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #nest-camera-banner {
+        background-position: 0px -50px;
+        height:450px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    #nest-camera-banner {
+        background-position: 0px -100px;
+    }
+}
+
+//////////////////////////////////////////////////////
+///     Video Section Styles
+
+.video-section {
+    background:#e6e6e7;
+    min-height: 410px;
+    padding-top:50px;
+    padding:50px 0 50px 0;
+}
+
+.video-wrapper {
+    margin-right: 20px;
+}
+
+.video-text {
+    max-width:450px;
+}
+
+.video-section h3{
+    padding-bottom: 20px;
+    color: @accent-color;
+    letter-spacing: .1em;
+    margin-top: 25px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #777;
+    .border-radius(5px);
+    .box-shadow(0px 15px 20px -14px rgba(0,0,0,0.75));
+
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+}
+
+
+
+
+//////////////////////////////////////////////////////
+///     Bootstraps Viewports
+//////////////////////////////////////////////////////
+
+// Extra small
+@media only screen and (max-width: 480px){
+
+    .video-container {
+        margin-bottom: 40px;
+    }
+
+
+    #nest-sub-menu {
+        height: 100px;
+    }
+
+    #nest-main-banner h2{
+        color: @accent-color;
+        font-size: 1.6em;
+    }
+
+    #product-sub-menu .product-sub-menu-item {
+        padding: 20px 0px;
+        font-size: 0.8em;
+        margin:0px 20px 0px 20px;
+    }
+
+    #product-sub-menu {
+        width: 340px;
+        padding-left: 15px;
+    }
+
+    #product-sub-menu .product-sub-menu-item span {
+        padding: 40px 0 0;
+    }
+
+    #product-sub-menu .product-thermostat span{
+        background-image: url("../images/nav-product-thermostat-mobile-1de533cae9.png");
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: center 0;
+        float:left;
+    }
+
+    #product-sub-menu .product-protect span {
+        background-image: url("../images/nav-product-protect-mobile-09ca45b3b8.png");
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: 50% 0;
+        //width: 120px;
+    }
+
+    #product-sub-menu .product-cam span {
+        background-image: url("../images/nav-product-camera-mobile-671ed2305f.png");
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        background-position: center 0;
+    }
+
+    .video-wrapper {
+        padding: 0px;
+    }
+
+    .video-section .row {
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .video-text {
+        //text-align: center;
+        max-width: none;
+    }
+
+    .video-section h3 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .video-container {
+        margin-bottom: 40px;
+    }
+
+    .video-wrapper {
+        margin-right: 0px;
+        padding: 0px 50px;
+    }
+
+    #nest-main-banner h2{
+        color: @accent-color;
+        font-size: 2.5em;
+    }
+
+}
+
+// Small
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .video-container {
+        margin-bottom: 40px;
+    }
+    .video-text {
+        //text-align: center;
+        max-width: none;
+    }
+    .video-wrapper {
+        margin-right: 0px;
+    }
+    .video-section h3 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .cam .video-text {
+        margin-bottom: 50px;
+    }
+
+    .cam {
+        padding: 40px 0px 10px 0px;
+    }
+}

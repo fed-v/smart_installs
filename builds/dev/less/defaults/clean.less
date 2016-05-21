@@ -1,0 +1,50 @@
+//////////////////////////////////////////////////////
+///     Clean Browser Default Styles
+//////////////////////////////////////////////////////
+
+// Remove Link Underlines
+:link, :visited { text-decoration:none }
+
+
+// Remove Link Outlines
+html *:active, html *:focus {
+	outline-style: none;
+	-moz-outline-style:none;
+}
+
+
+// Remove Default List Styles (lists are used more often for semantics)
+ul, ol { list-style:none }
+
+
+// Remove Default Heading Styles
+h1, h2, h3, h4, h5, h6, pre, code { font-size:1em; }
+
+
+// Remove Default margins
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input
+{ margin:0; padding:0 }
+
+
+// Remove Ugly Blue Linked Image Borders
+a img, :link img, :visited img { border:none }
+
+
+// De-italicize address
+address { font-style:normal }
+
+
+// Disable Textarea Resizing
+textarea { resize: none; }
+
+
+// Table Default Values
+// table {
+//   border-spacing: 0;
+//   border-collapse: collapse;
+// }   // This is found in Normalize
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}

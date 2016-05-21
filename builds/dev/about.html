@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Care about IE? -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Title tag is MANDATORY -->
+	<title>Smart Installs | Services</title>
+
+	<!-- Declare Viewport for Mobile Devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- META DATA (KEYWORD META TAG IS DEPRECIATED)-->
+	<meta name="description" content="" />
+	<meta name="author" content="Federico Venturino">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+	<!-- Latest compiled and minified Bootstrap CSS (http://glyphicons.bootstrapcheatsheets.com/)-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Additional Glyphicons from Google MDL (https://google.github.io/material-design-icons/)
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+	<!-- Font Awesome scalable vector icons (https://fortawesome.github.io/Font-Awesome/)-->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Your custom styles -->
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!--[if lte IE 8]>
+		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+		    <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/src/respond.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<h1 class="hidden">Smart Installs</h1>
+
+
+
+	<!--*******************************************************-->
+	<!--			 	       	Header			 			   -->
+	<!--*******************************************************-->
+
+	<header id="top">
+
+		<div id="login-menu">
+			<nav>
+				<h2 class="hidden">Login Menu</h2>
+				<button id="alarm-login-btn">Login to Alarm</button>
+				<button id="nest-login-btn">Login to Nest</button>
+			</nav>
+		</div>
+
+		<nav class="navbar navbar-default normal" role="navigation">
+			<h2 class="hidden">Main Navigation</h2>
+			<div class="container">
+				<div class="navbar-header">
+					<button id="hamburger-menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<!--<span class="sr-only">Toggle navigation</span>-->
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/logo.jpg" /></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right cl-effect-3">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="services.html" class="active">Services</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+
+
+	<!--*******************************************************-->
+	<!--			 	      Main Content					   -->
+	<!--*******************************************************-->
+
+	<main>
+
+
+
+		<!--*******************************************************-->
+		<!--			 Corporate Social Responsability		   -->
+		<!--*******************************************************-->
+
+
+		<section id="social-responsability" class="section-block">
+			<h2 class="hidden">Corporate Social Responsability</h2>
+			<div class="section-content text-centered">
+				<div>
+					<h3>Corporate Social Responsability</h3>
+					<hr class="text-decoration">
+					<p>At Smart Installs we are committed to minimizing our carbon footprint. That is why we have partnered with <strong><a href="http://createyourforest.ca/" target="_blank">createyourforest.ca</a></strong> to plant a tree for each installation.
+						We also properly ensure the recycling of old technology as well as provide advice on how to configure your nest products to help you save energy.
+						That is just our way of giving back to our community.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+	</main>
+
+
+
+	<!--*******************************************************-->
+	<!--			 	       	Footer					       -->
+	<!--*******************************************************-->
+
+	<footer>
+
+		<section id="footer">
+
+			<h2 class="hidden">Footer</h2>
+			<nav id="social-media-wrapper" role="navigation">
+				<h2 class="hidden">Social Media</h2>
+				<ul class="social-media-nav">
+					<li><a href="#" id="twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+					<li><a href="#" id="google"><i class="fa fa-google-plus"></i>Google</a></li>
+					<li><a href="#" id="facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+				</ul>
+			</nav>
+			<br/>
+			<div id="copyright-wrapper">
+				<p id="copyright" class="clear">&copy; Copyright <span id="year"></span> | <span class="smartinstalls">Smart Installs</span></p>
+			</div>
+
+			<!-- Top Link -->
+			<div class="local-scroll">
+				<a href="#top" class="btn-go-top"><i class="fa fa-angle-up"></i></a>
+			</div>
+			<!-- End Top Link -->
+
+		</section>
+
+	</footer>
+
+
+
+	<!--*******************************************************-->
+	<!--			 	   	Javascript Links				   -->
+	<!--*******************************************************-->
+
+	<!-- Fastest loading jQuery version -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		if (typeof jQuery === 'undefined') {
+			document.write(unescape('js/jquery-2.1.4.min.js'));
+		}
+	</script>
+
+	<!-- Other helper JS frameworks -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<!-- Javascript Libraries Used -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/jquery.localScroll.min.js"></script>
+
+	<!-- Custom Javascript -->
+	<script src="js/script.min.js"></script>
+
+</body>
+
+</html>

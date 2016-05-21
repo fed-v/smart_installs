@@ -1,0 +1,387 @@
+//////////////////////////////////////////////////////
+///     Section Block Styles
+//////////////////////////////////////////////////////
+
+.text-decoration {
+	width:75px;
+	margin:auto;
+	margin-top: 8px;
+  	margin-bottom: 30px;
+}
+
+.text-centered {
+	text-align: center;
+}
+
+.text-centered p{
+	margin-bottom:35px;
+}
+
+.section-block {
+	padding: 100px 50px 100px 50px;
+}
+
+.section-content {
+	max-width:900px;
+	margin:auto;
+}
+
+.section-content h3 {
+	font-size: 2.2em;
+	margin-bottom:10px;
+}
+
+.section-content img {
+	float:left;
+	margin-right: 50px;
+}
+
+
+
+/////////////////////////////////////////////////////////////////
+/// Green Installation Styles
+
+#green-installs {
+	height:200px;
+	padding: 25px;
+	.background-cover('../images/forrest.jpg');
+	color:#fff;
+}
+
+#green-installs a{
+	color:#fff;
+	.transition(.5s ease-in-out);
+}
+
+#green-installs a:hover{
+	color:#333;
+	.transition(.5s ease-in-out);
+}
+
+
+/////////////////////////////////////////////////////////////////
+/// Why Choose Us Styles
+
+
+#why-section {
+	min-height: 600px;
+	text-align: center;
+}
+
+#why-section .container{
+	width:100%;
+}
+
+#why-section .quality{
+	margin-top: 50px;
+}
+
+
+#why-section .quality span{
+	font-size: 2.8em;
+	color:@accent-color;
+}
+
+#why-section .quality h4{
+	margin: 20px 0px 20px 0px;
+}
+#why-section .row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+// Create a 2-column grid when sm size with 4 elements
+@media only screen and (min-width: 768px) and (max-width: 992px){
+	#why-section .quality div{
+		height:120px;
+	}
+	#why-section .quality {
+		width: 50%;
+	}
+}
+
+/////////////////////////////////////////////////////////////////
+/// Nest Installation Styles
+
+#nest-banner {
+	height:525px;
+	color:#fff;
+	background:#282828;
+}
+
+#nest-banner .section-content .image-wrapper {
+	width:40%;
+}
+
+#nest-banner .section-content a {
+	margin-top: 25px;
+}
+
+@media only screen and (max-width: 968px){
+	#nest-banner {
+		height:500px;
+	}
+}
+
+@media only screen and (max-width: 810px){
+	#nest-banner {
+		height:460px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#nest-banner {
+		height:320px;
+		font-size: .9em;
+	}
+}
+
+
+
+/////////////////////////////////////////////////////////////////
+/// Affiliates Section Styles
+
+#affiliates-banner {
+	height:110px;
+	background: #fafafa;
+	padding:25px 0px 25px 0px;
+	position: relative;
+	z-index: 1;
+}
+
+#affiliates-banner .section-content {
+	max-width: 600px;
+}
+
+#affiliates-banner .affiliates-wrapper {
+	width: 33%;
+	margin:auto;
+	height: 50px;
+	float:left;
+}
+
+#affiliates-banner .affiliates-wrapper img {
+	margin-left: 30%;
+}
+
+
+/////////////////////////////////////////////////////////////////
+/// Contact Section Styles
+
+
+#contact {
+	min-height: 600px;
+    padding-top: 100px;
+	position: relative;
+	z-index: 10;
+	.box-shadow(0 1px 5px 2px rgba(0,0,0,.15));
+}
+
+#contact form{
+	min-height: 300px;
+    max-width:575px;
+    margin:auto;
+	margin-top:25px;
+	font-size: 1em;
+	padding: 25px;
+}
+
+label {
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#contact form input, #contact form textarea{
+	width:100%;
+	border:none;
+	border-bottom:1px solid #C7C7CD;
+	padding:2px 0px 20px 0px;
+	margin-bottom:35px;
+	.transition(.5s ease-in-out);
+}
+
+#contact form textarea {
+	margin-bottom: 20px;
+}
+
+#contact form input:focus, #contact form textarea:focus{
+	border-bottom:1px solid #000;
+	.transition(.5s ease-in-out);
+}
+
+#contact .button{
+    width:120px;
+	border-bottom:none;
+	padding:12px 25px 12px 25px;
+}
+
+#contact #map{
+    height:300px;
+	border: 1px solid #C7C7CD;
+	margin-top:100px;
+}
+
+#contact #info{
+    width:90%;
+	color:#737272;
+	font-size: 0.9em;
+}
+
+#contact #info .contact-info-block{
+    width:33.3%;
+	padding:40px 20px 10px 20px;
+	float:left;
+}
+
+#contact #info .contact-info-block span{
+    font-size: 1.6em;
+	margin-bottom:15px;
+	color:#000;
+}
+
+@media only screen and (max-width: 998px){
+	#contact #info .contact-info-block{
+		padding:40px 10px 10px 10px;
+	}
+	#contact #info{
+	    width:100%;
+	}
+}
+
+@media only screen and (max-width: 840px){
+	#contact #info{
+	    font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 668px){
+	#contact #info .contact-info-block{
+		width: 100%;
+	}
+}
+
+//////////////////////////////////////////////////////
+///     Bootstraps Viewports
+//////////////////////////////////////////////////////
+
+// Extra small
+@media only screen and (max-width: 480px){
+
+	.col-md-6 {
+		padding-left: 0px;
+		padding-right: 20px;
+	}
+
+	.section-block {
+		padding: 50px 25px 50px 25px;
+	}
+
+	#green-installs {
+		height:80px;
+		padding: 10px 20px 20px 20px;
+		background: url('../images/forrest.jpg') no-repeat 50% 20% ;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	#green-installs img{
+		height:60px;
+		width:52px;
+		margin-right:20px;
+	}
+
+	#green-installs div p{
+		font-size: 12px;
+	}
+
+	#green-installs .section-content h3{
+		font-size: 1.3em;
+		padding-top:18px;
+		text-align:center;
+	}
+
+	#nest-banner {
+		height:450px;
+		padding-top:45px;
+	}
+
+	#nest-banner .section-content h3{
+		text-align:center;
+		font-size: 2em;
+		margin-bottom:10px;
+	}
+
+	.mobile-image-wrapper {
+		width:60%;
+		margin:auto;
+		margin-top:30px;
+	}
+
+	#affiliates-banner {
+		height: 80px;
+	}
+
+	#affiliates-banner .affiliates-wrapper img {
+		width: 72px;
+		height: 31px;
+		margin-left: 25%;
+	}
+
+	#contact {
+	    padding-top: 50px;
+	}
+
+	#contact .button{
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 768px){
+	/*#contact #info .contact-info-block{
+	    width:100%;
+		padding:40px 20px 0px 20px;
+	}*/
+}
+
+@media only screen and (max-width: 992px) {
+	#nest-banner p{
+		font-size: .9em;
+	}
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+	#nest-banner .section-content .image-wrapper {
+		width:30%;
+	}
+
+	#nest-banner .section-content img {
+		margin-right: 20px;
+	}
+
+	#green-installs img{
+		margin-right:15px;
+	}
+
+	.section-block {
+		padding: 50px 20px 50px 20px;
+	}
+
+}
+
+// Small
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+	#green-installs{
+		font-size: 1em;
+	}
+
+	.section-content h3{
+		font-size:2em;
+	}
+
+}
