@@ -40,6 +40,7 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
     "imagemin-pngquant": "^4.2.2",
+    "steal": "^0.16.17",
     "vinyl-source-stream": "^1.1.0"
   }
 }
