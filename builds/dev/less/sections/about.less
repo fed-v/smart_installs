@@ -9,12 +9,12 @@
     height: 350px;
 }
 
-// This padding type should be "mid padding" class
-.about-section {
-    padding: 75px 50px 75px 50px;
+#mission-statement {
+    .grey-bg();
+    .mid-padding();
 }
 
-.about-section .button{
+#mission-statement .button{
     width: 141px;
     margin: auto;
     margin-top: 50px;
@@ -25,9 +25,21 @@
     .half-padding();
 }
 
-#mission-statement {
-    .grey-bg();
+#social-responsability hr{
+    width:120px;
 }
+
+#social-responsability a{
+	color:#fff;
+	.transition(.5s ease-in-out);
+}
+
+#social-responsability a:hover{
+	color:#333;
+	.transition(.5s ease-in-out);
+}
+
+
 
 /////////////////////////////////////////////////////////////////
 /// Testimonials Section Styles
@@ -60,6 +72,47 @@
 ///     Bootstraps Viewports
 //////////////////////////////////////////////////////
 
+// Extra small
+@media only screen and (max-width: 480px){
+    #mission-statement {
+        .half-padding();
+    }
+
+    #social-responsability {
+		.half-padding();
+		background: url('../images/forrest.jpg') no-repeat 50% 20% ;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	#social-responsability img{
+		height:60px;
+		width:52px;
+		margin-right:20px;
+	}
+
+	#social-responsability p{
+		font-size: .9em;
+	}
+
+	#social-responsability .section-content h3{
+		font-size: 1.6em;
+		padding-top:18px;
+		text-align:center;
+	}
+
+	.text-decoration {
+    	margin: 8px auto 20px;
+	}
+
+    .testimonials .flex-item blockquote p{
+        font-size: 0.9em;
+    }
+
+}
+
 // Medium
 @media only screen and (max-width: 768px) {
     .flex-container {
@@ -68,13 +121,6 @@
     .testimonials {
         .flex-item {
             margin-bottom: 50px;
-            font-size: 1em;
-
-            blockquote {
-                p {
-                    font-size: 1em;
-                }
-            }
         }
         .flex-item:last-child {
             margin-bottom: 0px;
@@ -82,7 +128,26 @@
     }
 }
 
-// Small
-@media only screen and (min-width: 768px) and (max-width: 992px){
+// THIS CRAP SHOULD BE REVISED!
 
+@media only screen and (max-width: 550px){
+	#social-responsability {
+		//font-size: 0.9em;
+	}
+	#social-responsability h3{
+		font-size: 2em;
+	}
 }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	#social-responsability img{
+		margin-right:15px;
+	}
+}
+
+// Small
+// @media only screen and (min-width: 768px) and (max-width: 992px){
+// 	#social-responsability{
+// 		font-size: 1em;
+// 	}
+// }
