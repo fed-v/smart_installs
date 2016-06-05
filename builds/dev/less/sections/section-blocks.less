@@ -18,7 +18,7 @@
 }
 
 .section-block {
-	padding: 100px 50px 100px 50px;
+	padding: @vertical-padding @horizontal-padding;
 }
 
 .section-content {
@@ -44,20 +44,7 @@
 #green-installs {
 	height:200px;
 	padding: 25px;
-	.background-cover('../images/forrest.jpg');
-	color:#fff;
 }
-
-#green-installs a{
-	color:#fff;
-	.transition(.5s ease-in-out);
-}
-
-#green-installs a:hover{
-	color:#333;
-	.transition(.5s ease-in-out);
-}
-
 
 /////////////////////////////////////////////////////////////////
 /// Why Choose Us Styles
@@ -105,8 +92,6 @@
 
 #nest-banner {
 	height:525px;
-	color:#fff;
-	background:#282828;
 }
 
 #nest-banner .section-content .image-wrapper {
