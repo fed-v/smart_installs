@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////
-/// Declare Variables
+/// Variables
 //////////////////////////////////////////////////////
 
 
@@ -32,3 +32,49 @@
 // Margins
 @vertical-padding: 100px;       // In a breakpoint, reduce to 75px, then 50px.
 @horizontal-padding: 50px;      // In mobile, reduce to 25px.
+
+
+
+//////////////////////////////////////////////////////
+/// Mixins
+//////////////////////////////////////////////////////
+
+// Backgrounds
+.white-bg() {
+	background: @white;
+	color: @black;
+}
+
+.grey-bg() {
+	background: @grey;
+	color: @black;
+}
+
+.dark-bg() {
+	background: @dark;
+	color: @dark-text;
+}
+
+.black-bg() {
+	background: @charcoal;
+	color: @white;
+}
+
+.forrest-bg() {
+	.background-cover('../images/forrest.jpg');
+	color: #FFFFFF;
+
+	a {
+		color: #FFFFFF;
+		.transition(.5s ease-in-out);
+	}
+	a:hover {
+		color: @charcoal;
+		.transition(.5s ease-in-out);
+	}
+}
+
+// Padding & Margin
+.half-padding() {
+	padding: 50px 25px;
+}

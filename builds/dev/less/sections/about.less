@@ -11,7 +11,7 @@
 
 // This padding type should be "mid padding" class
 .about-section {
-    padding: 75px 50px 75px 50px; 
+    padding: 75px 50px 75px 50px;
 }
 
 .about-section .button{
@@ -20,9 +20,69 @@
     margin-top: 50px;
 }
 
+#social-responsability {
+    .forrest-bg();
+    .half-padding();
+}
+
+#mission-statement {
+    .grey-bg();
+}
+
 /////////////////////////////////////////////////////////////////
 /// Testimonials Section Styles
 
 .testimonials {
+    .white-bg();
+    .half-padding();
+
+    .flex-item {
+        padding: 0 25px;
+        text-align: center;
+
+        blockquote {
+            border: none;
+            margin: 0;
+            font-style:italic;
+
+            footer {
+                margin-top: 5px;
+                color: @dark-text;
+            }
+            cite {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+///     Bootstraps Viewports
+//////////////////////////////////////////////////////
+
+// Medium
+@media only screen and (max-width: 768px) {
+    .flex-container {
+        .flex-direction(column);
+    }
+    .testimonials {
+        .flex-item {
+            margin-bottom: 50px;
+            font-size: 1em;
+
+            blockquote {
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+        .flex-item:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+// Small
+@media only screen and (min-width: 768px) and (max-width: 992px){
 
 }

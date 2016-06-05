@@ -194,6 +194,7 @@ a, a:hover, a:focus, a:visited {
 }
 
 .title-section {
+	.white-bg();
 	.flex-direction(column);
 	padding: @vertical-padding @horizontal-padding;
 	text-align: center;
@@ -208,47 +209,6 @@ a, a:hover, a:focus, a:visited {
 	}
 }
 
-.half-padding {
-	padding: 50px 25px;
-}
-
-
-/////////////////////////////////////////////////////////////////
-/// backgrounds
-
-.white-bg {
-	background: @white;
-	color: @black;
-}
-
-.grey-bg {
-	background: @grey;
-	color: @black;
-}
-
-.dark-bg {
-	background: @dark;
-	color: @dark-text;
-}
-
-.black-bg {
-	background: @charcoal;
-	color: @white;
-}
-
-.forrest-bg {
-	.background-cover('../images/forrest.jpg');
-	color: #FFFFFF;
-
-	a {
-		color: #FFFFFF;
-		.transition(.5s ease-in-out);
-	}
-	a:hover {
-		color: @charcoal;
-		.transition(.5s ease-in-out);
-	}
-}
 
 
 //////////////////////////////////////////////////////
