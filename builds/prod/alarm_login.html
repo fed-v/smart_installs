@@ -1,0 +1,240 @@
+<!DOCTYPE html><!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js lang=en><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Smart Installs | Alarm Login</title><meta name=viewport content="width=device-width, initial-scale=1"><meta name=description><meta name=author content="Federico Venturino"><link rel="shortcut icon" href=images/favicon.ico><link rel=apple-touch-icon href=images/apple-touch-icon.png><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css><link rel=stylesheet href=http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css><link rel=stylesheet href=css/styles.min.css><!--[if lte IE 8]>
+		 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+		 <script src="https://raw.githubusercontent.com/scottjehl/Respond/master/src/respond.js"></script>
+		<![endif]--><script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-81348307-1', 'auto');
+		  ga('send', 'pageview');
+		</script><script type=text/javascript>
+
+   // Test whether the user has cookies enabled by setting a cookie
+   //  and then trying to retrieve it back.  If a "true" argument is passed
+   //          then this function attempts to test whether persistant cookies
+   //          (i.e. non session cookies) are enabled.
+
+   function testClientCookies() {
+
+		   var testPersistant = false;
+		   if (arguments.length > 0) testPersistant = arguments[0];
+		   if (testPersistant) {
+
+					   // save a new cookies with an expiration date set to 5 seconds from now
+					   var now = new Date();
+					   var cookiedate = new Date(now.valueOf() + 1000*5);
+					   document.cookie = "cookieTest=persist;expires=" + cookiedate.toGMTString();
+		   }
+
+		   else {
+					   // save a session cookie (no expiration specified = lives for the
+					   //          lifetime of the browser) so that we check for any kind of cookies
+					   document.cookie = "cookieTest=session"
+		   }
+
+
+
+		   if ((document.cookie).indexOf("cookieTest") == -1)
+		   {
+				 // cookie not found; all cookies must be disabled
+				 return false;
+		   }
+		   else
+		   {
+				  return true;
+		   }
+
+   }  // testClientCookies
+
+
+
+   // function of client-side check(s) that are made when the user tries to log in
+
+   function doLoginTimeChecks() {
+			debugger;
+		   // test if Session-cookies (at least) are enabled
+		   if (testClientCookies()) {
+
+					   document.forms['loginForm'].cookieTest.value = '1';
+
+		   }
+
+		   // we cannot test if JavaScript is enabled (because the test itself would
+		   //          have to be written in JavaScript) but we can set a variable that will
+		   //          be looked at by login.asp when the user submits the form
+
+		   document.forms['loginForm'].JavaScriptTest.value = '1';
+		   return true;
+
+   }
+
+	// Cookie reader
+   function readCookie(name)
+   {
+	  var cookieValue = "";
+	  var search = name + "=";
+	  if(document.cookie.length > 0)
+	  {
+		 offset = document.cookie.indexOf(search);
+		 if (offset != -1)
+		 {
+			offset += search.length;
+			end = document.cookie.indexOf(";", offset);
+			if (end == -1) end = document.cookie.length;
+			cookieValue = unescape(document.cookie.substring(offset, end))
+		  }
+	  }
+
+	  return cookieValue;
+	}
+
+
+	// Querystring reader
+	function getQuerystring(key, default_)
+	{
+	  if (default_==null) default_="";
+	  key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	  var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+	  var qs = regex.exec(window.location.href);
+	  if(qs == null)
+		return default_;
+	  else
+		return qs[1];
+	 }
+
+
+
+   //  If you use "Remember Me" checkbox along with login / password, this section is needed.
+   //  This function will be called
+   //
+
+   function rememberMeClick() {
+	   if (document.forms['loginForm'].rememberMe.checked == true) {
+		   // first check if cookies are enabled at all so that we don't
+		   //	inaccurately claim that "only session cookies are enabled"
+		   if (!testClientCookies) {
+			   window.location = '/yourloginpagehere.xxx?m=cookies_off&browser=' + browserCode;
+			   return;
+		   }
+
+		   // check for non-session cookie (pass true as argument)
+		   if (!testClientCookies(true)) {
+			   alert('In order to take advantage of Alarm.com\'s "Remember My Login" feature, you must allow cookies to be stored on your computer.  Visit the Alarm.com FAQ for more information.');
+			   document.forms['loginForm'].rememberMe.checked = false;
+		   }
+	   }
+   }
+
+
+   //  If you use "Remember Me" checkbox along with login / password, this section is needed.
+   //  This function will be called
+   //
+  function LoadRememberedLoginName()
+  {
+
+	 var login = ''
+	 login = readCookie('login')
+
+	 if (login != '')
+	 {
+	   var loginbox = document.getElementById('login')
+	   if (loginbox != null)
+	   {
+		loginbox.value = login;
+	   }
+
+	   var chkRemember = document.getElementById('rememberMe')
+	   if (chkRemember != null)
+	   {
+		chkRemember.checked = true;
+	   }
+   }
+  }
+
+
+  //
+  // Error message
+  //
+  // !! You can customize your own error message here.
+  //
+
+  function showAlarmLoginMessage()
+  {
+	var Qm = getQuerystring("m");
+	if (Qm == null) return;
+
+	var msg, errorReason;
+	msg = "";
+	switch(Qm)
+	{
+	   case "bad_permission":
+		 msg = "I'm sorry, you tried to reach a page or an object that you do not have permission to access. If you reached this page via a bookmark, please delete your bookmark, navigate to the page that you are trying to reach, and then re-bookmark the page. If you reached this page by manually typing in a URL, you may have entered an incorrect number or the number may have changed in our records. We encourage users to use the Alarm.com site links rather than typing in URLs for this reason."
+		 break;
+	   case "cookies_off":
+		 msg = "It appears that cookies are not enabled on your computer. Although Alarm.com does not store any personal information on your computer, your browser must have cookies enabled in order to maintain your secured identity while you are logged in."
+		 break;
+	   case "logout":
+		 msg = "You have successfully logged out."
+		 break;
+	   case "no_session":
+		 msg = "I'm sorry, your session has automatically timed out as a security precaution - please log in again."
+		 break;
+	   case "scripting_off":
+		 msg = "It appears that your browser's current security settings prevent JavaScript from working correctly.  Alarm.com uses JavaScript to add functionality to our web pages and make them easier to use."
+		 break;
+	   case "sensors_cmd_sent":
+		 msg = "A request has been sent to your system to retrieve an up-to-date sensor list.  It may take up to 2-3 minutes for this process to be completed.  After a few moments, please try to log in again."
+		 break;
+	   case "web_error":
+		 msg = "I'm sorry, an unexpected error occurred while processing the page you requested. As a security precaution you have been automatically logged out.  If the problem persists after you log back into the site, please contact us for help in resolving this problem."
+		 break;
+	   case "login_fail":
+		   errorReason = getQuerystring("r")
+		   if (errorReason == "lockout")
+		   {
+			 msg = "As a security precaution your account has been locked out due to too many incorrect password attempts.  To unlock your account, please request a new password by filling out the 'Forgot your password' form <A href='https://www.alarm.com/forgot_logininfo.asp'>here."
+		   }
+		   else if (errorReason == "terminated")
+		   {
+			 msg = "Your account has been terminated.  If you believe this to be in error, or if you would like to re-activate your account, please contact us."
+		   }
+		   else if (errorReason == "no_panel")
+		   {
+			 msg = "Your control panel has not communicated with Alarm.com. Please make sure your control panel is powered on then try again. If you are still having trouble, please contact us."
+		   }
+		   else if (errorReason == "error")
+		   {
+			 msg = "We're sorry, your account is currently unavailable. A message has automatically been sent to Technical Support to address this issue. We will contact you when the issue has been resolved. "
+		   }
+		   else if (errorReason == "custom")
+		   {
+			 msg =  getQuerystring("cm")
+		   }
+		   else if (errorReason == "no_match")
+		   {
+			 msg = "I'm sorry, the login and/or password you entered were not correct. If you have forgotten your login or password, please contact us."
+		   }
+		 break;
+	   default:
+		 break;
+	 }
+
+	 var divMsg = document.getElementById("divAlarmMessage");
+	 if (divMsg != null)
+	 {
+		  divMsg.innerHTML = msg
+	 }
+
+  }
+
+</script></head><body><h1 class=hidden>Smart Installs</h1><header id=top><div id=login-menu><nav><h2 class=hidden>Login Menu</h2><button id=alarm-login-btn>Login to Alarm</button> <button id=nest-login-btn>Login to Nest</button></nav></div><nav class="navbar navbar-default normal" role=navigation><h2 class=hidden>Main Navigation</h2><div class=container><div class=navbar-header><button id=hamburger-menu type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=.navbar-collapse><span></span> <span></span> <span></span> <span></span></button> <a class=navbar-brand href=#><img src=images/logo.jpg></a></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav navbar-right cl-effect-3"><li><a href=index.html>Home</a></li><li class=dropdown><a tabindex=0 data-toggle=dropdown>Services <span class=caret></span></a><ul class=dropdown-menu role=menu><li><a href=automation.html>Home Automation</a></li><li><a href=cabling.html>Structured Cabling</a></li><li><a href=security.html>Security</a></li></ul></li><li><a href=#>About us</a></li><li><a href=index.html#contact>Contact</a></li></ul></div></div></nav></header><main><section id=contact class="local-scroll white-bg"><div class=section-content><h2>Login to Alarm.com</h2><hr class=text-decoration><form id=contactForm action=https://www.alarm.com/login.asp method=POST name=loginForm onsubmit=javascript:doLoginTimeChecks();><input type=hidden name=JavaScriptTest> <input type=hidden name=cookieTest> <input type=hidden name=loginFolder value=http://url_redirect_after_logout><div id=divAlarmMessage style="color: Red;"></div><script language=javascript>
+			          showAlarmLoginMessage()
+			      </script>Login: <input type=text size=15 name=login id=login> Password: <input type=password size=15 name=password id=password><br><input type=checkbox name=rememberMe id=rememberMe onclick=javascript:rememberMeClick()>Remember My Login<br><script language=javascript>
+			          LoadRememberedLoginName()
+			      </script><input class="button black right" type=submit value=Login></form><br><br><br></div></section></main><footer id=footer><h2 class=hidden>Footer</h2><nav id=social-media-wrapper role=navigation><h2 class=hidden>Social Media</h2><ul class=social-media-nav><li><a href=# id=twitter><i class="fa fa-twitter"></i>Twitter</a></li><li><a href=# id=google><i class="fa fa-google-plus"></i>Google</a></li><li><a href=# id=facebook><i class="fa fa-facebook"></i>Facebook</a></li></ul></nav><br><div id=copyright-wrapper><p id=copyright class=clear>&copy; Copyright <span id=year></span> | <span class=smartinstalls>Smart Installs</span></p></div><div class=local-scroll><a href=#top class=btn-go-top><i class="fa fa-angle-up"></i></a></div></footer><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script><script>
+		if (typeof jQuery === 'undefined') {
+			document.write(unescape('js/jquery-2.1.4.min.js'));
+		}
+	</script><script src=https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js></script><script src=js/jquery.easing.1.3.js></script><script src=js/jquery.scrollTo.min.js></script><script src=js/jquery.localScroll.min.js></script><script src=js/script.min.js></script></body></html>

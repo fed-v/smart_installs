@@ -1,0 +1,49 @@
+//////////////////////////////////////////////////////
+///     Security Us Styles
+//////////////////////////////////////////////////////
+
+#security-main-banner {
+    background: url(../images/slide_2.jpg) 0 30% no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 420px;
+    &.title-section{
+        padding-top: 75px;
+    }
+    .flex-item {
+        flex: 0;
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 3.8em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #security-main-banner {
+        text-align: left;
+        padding-left: 15%;
+        &.title-section{
+            align-items: flex-start !important;
+        }
+        .sub-text {
+            max-width: 500px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #security-main-banner {
+        height: auto;
+        background-position-x: 75% !important;
+        &.title-section{
+            padding-top: 50px;
+        }
+        h2 {
+            font-size: 2.2em;
+        }
+        .sub-text {
+            max-width: 380px !important;
+        }
+    }
+}

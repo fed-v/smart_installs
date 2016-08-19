@@ -42,5 +42,8 @@
     "imagemin-pngquant": "^4.2.2",
     "steal": "^0.16.17",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.2"
   }
 }

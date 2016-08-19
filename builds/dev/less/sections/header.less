@@ -14,7 +14,7 @@ header {
   font-family: @bodyFontFamily;
   font-size: .8em;
 
-  display:none;
+  //display:none;
 }
 
 #login-menu nav {
@@ -71,6 +71,38 @@ header {
     background: #000;
 }
 
+// Dropdown styles
+
+.navbar-default .navbar-nav>.open>a,
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background: none !important;
+    color: #bbb;
+    .transition(.5s ease-in-out);
+}
+
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+.navbar-right .dropdown-menu {
+    right: -75px !important;
+    margin-top: 11px !important;
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    a {
+        color: #333;
+        .transition(.5s ease-in-out);
+    }
+    li {
+        margin-bottom: 10px;
+        border-bottom: 1px solid grey;
+        padding-bottom: 10px;
+        &:last-child{
+            margin: 0px;
+        }
+    }
+}
+
 //////////////////////////////////////////////////////
 /// Link Color Hover Effect
 
@@ -85,7 +117,7 @@ header {
 }
 
 .navbar-nav > li > a:focus{
-    color: #bbb !important;
+    //color: #bbb !important;
 }
 
 .navbar-brand:hover {
@@ -134,8 +166,7 @@ header {
 	transform: translateY(10px);
 }
 
-.cl-effect-3 a:hover::after,
-.cl-effect-3 a:focus::after {
+.cl-effect-3 a:hover::after {
 	opacity: 1;
     width: 50%;
     left: 25%;
@@ -144,6 +175,10 @@ header {
 	transform: translateY(0px);
 }
 
+// Remove from dropdown menu
+.cl-effect-3 .dropdown li a::after {
+    content: none;
+}
 
 
 //////////////////////////////////////////////////////
@@ -195,6 +230,14 @@ header {
     	background:#f4f4f4;
         .transition(1s);
     }*/
+
+    // Dropdown mobile styles
+    .navbar-right .dropdown-menu {
+        li {
+            border-bottom: none;
+        }
+    }
+
 
     #login-menu {
       display:none;

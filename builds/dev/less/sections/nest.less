@@ -2,7 +2,6 @@
 ///     Nest Page Styles
 //////////////////////////////////////////////////////
 
-
 #nest-main-banner {
     .back-image('../images/nest-page-banner.jpg');
     margin:auto;
@@ -230,8 +229,10 @@
 }
 
 #protect-info {
-    background: @grey;
-    color: #8A9299;
+    .grey-bg();
+    &.white{
+        .white-bg();
+    }
 }
 
 #protect-info .container div {

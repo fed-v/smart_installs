@@ -29,6 +29,16 @@
 
 
     $(document).ready(function(){
+
+        // Fixes sub-nav not working as expected on IOS
+        $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+
+        $('#dropdown').on('click', function(e){
+
+            //$('#dropdown').addClass("open");
+
+        });
+
         $(window).trigger("resize");
         init_scroll_navigate();
         initPageSliders();
@@ -74,17 +84,17 @@
       enquiry.removeAttribute("class");
 
       // Check empty fields
-      if(name.value.length == 0){
+      if(name.value.length === 0){
          event.preventDefault();
          name.setAttribute("class", "error");
       }
 
-      if(email.value.length == 0){
+      if(email.value.length === 0){
          event.preventDefault();
          email.setAttribute("class", "error");
       }
 
-      if(enquiry.value.length == 0){
+      if(enquiry.value.length === 0){
          event.preventDefault();
          enquiry.setAttribute("class", "error");
       }
@@ -201,7 +211,7 @@ function initPageSliders(){
             navigationText: ["<img class='arrow flipped' src='images/arrow.png'/>", "<img class='arrow' src='images/arrow.png'/>"]
         });
     })(jQuery);
-};
+}
 
 
 /* ---------------------------------------------

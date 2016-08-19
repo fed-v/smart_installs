@@ -9,6 +9,9 @@
 @bodyFontFamily  : "Open Sans", sans-serif;
 @headerFontFamily: "Josefin Sans", sans-serif;
 
+// @bodyFontFamily  : "Arial", sans-serif;
+// @headerFontFamily: "Arial", sans-serif;
+
 // Grayscale
 @black-10        : darken(#fff, 10%);
 @black-20        : darken(#fff, 20%);
@@ -43,6 +46,10 @@
 .white-bg() {
 	background: @white;
 	color: @black;
+}
+
+.white {
+	.white-bg();
 }
 
 .grey-bg() {

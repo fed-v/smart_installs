@@ -26,7 +26,8 @@ var gulp         = require('gulp'),
     del          = require('del'),
     changed      = require('gulp-changed'),             // Checks if the file in stream has changed before continuing
     source       = require('vinyl-source-stream'),
-    config       = require('./config.json');            // Import JSON file with all configuration variables
+    config       = require('./config.json'),            // Import JSON file with all configuration variables
+    svgmin       = require('gulp-svgmin');
 
 
 
@@ -133,6 +134,28 @@ gulp.task('images', function() {
 	.pipe(notify({ message: 'Images task complete' }));
 });
 
+// Minify svgoPlugins
+gulp.task('svg-min', function () {
+    return gulp.src(config.PROD_ASSETS.images + '/*.svg')
+        .pipe(svgmin({
+            plugins: [{
+                removeDoctype: true
+            }, {
+                removeComments: true
+            }, {
+                cleanupNumericValues: {
+                    floatPrecision: 2
+                }
+            }, {
+                convertColors: {
+                    names2hex: false,
+                    rgb2hex: false
+                }
+            }]
+        }))
+        .pipe(gulp.dest(config.PROD_ASSETS.images))
+        .pipe(notify({ message: 'SVG task complete' }));
+});
 
 // Error Handler
 var onError = function(err) {
@@ -150,7 +173,7 @@ var onError = function(err) {
 
 // Default Task: Executes all the declared tasks except clean and watches
 // development environment for any changes made.
-gulp.task('default', ['styles', 'scripts', 'minify-html', 'images', 'set-server'], function() {
+gulp.task('default', ['styles', 'scripts', 'minify-html', /*'images', */'set-server'], function() {
     gulp.watch( config.DEV_ASSETS.styles + '**/*.less', ['styles'] );
     gulp.watch( config.DEV_ASSETS.scripts + '**/*.js', ['scripts'] );
     gulp.watch( config.BASE_PATH.dev + '**/*.html', ['minify-html'] );
